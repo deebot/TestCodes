@@ -1,10 +1,10 @@
 /******************************************************************************
- * Copyright (C) 2017 by Alex Fosdick - University of Colorado
+ * Copyright (C) 2018 by Deepankar Maithani 
  *
  * Redistribution, modification or use of this software in source or binary
  * forms is permitted as long as the files maintain this copyright. Users are 
  * permitted to modify this and use it to learn about the field of embedded
- * software. Alex Fosdick and the University of Colorado are not liable for any
+ * software. Deepankar Maithani is not liable for any
  * misuse of this material. 
  *
  *****************************************************************************/
@@ -18,8 +18,10 @@
  * @date <15 JAN 2018 >
  *
  */
+#ifndef __STATS_H__
+#define __STATS_H__
 
-#define HOW_MANY (5)
+#define HOW_MANY 6  
 
 /* Add Your Declarations and Function Comments here */ 
 /**
@@ -31,7 +33,7 @@
  * @param <count> <count of numbers given as input>
  * @return <returns a float vlaue which represnets mean >
  */
-float find_mean(float *ptr, float count)
+float find_mean(float *ptr, int count);
 
 
 /**
@@ -42,7 +44,7 @@ float find_mean(float *ptr, float count)
  * @param <count> <count of numbers given as input>
  * @return <returns an array which has sorted numbers in decending order >
  */
-float sort_array(float *ptr,float count)
+float sort_array(float *ptr,int count);
 
 
 /**
@@ -53,7 +55,7 @@ float sort_array(float *ptr,float count)
  * @param <count> <count of numbers given as input>
  * @return <returns a float type minium number >
  */
-float find_minimum(float *ptr,float count)
+float find_minimum(float *ptr,int count);
 
 
 
@@ -65,7 +67,7 @@ float find_minimum(float *ptr,float count)
  * @param <count> <count of numbers given as input>
  * @return <returns a float type maximum number >
  */
-float find_maximum(float *ptr,float count)
+float find_maximum(float *ptr,int count);
 
 
 /**
@@ -76,7 +78,7 @@ float find_maximum(float *ptr,float count)
  * @param <count> <count of numbers given as input>
  * @return <returns a float type number which reprents median >
  */
-float find_median(float *ptr,float count)
+float find_median(float *ptr,int count);
 
 
 /**
@@ -85,10 +87,21 @@ float find_median(float *ptr,float count)
  * <NIL>
  * @param <*ptr> <pointer for array holding the input numbers>
  * @param <count> <count of numbers given as input>
- * @return <returns multiple values >
+ * @return <returns nothing >
  */
 
-int print_statastics(float val1,float val2,float val4,float val5,float *ptr)
+float print_statastics(float val1,float val2,float val4,float val5,float *ptr);
+
+/**
+ * @brief <This function prints the statastics about the entered numbers >
+ *
+ * <NIL>
+ * @param <*ptr> <pointer for array holding the input numbers>
+ * @param <count> <count of numbers given as input>
+ * @return <returns nothing >
+ */
+
+void arrayPrinter(float *ptr,int count);
 
 
 
